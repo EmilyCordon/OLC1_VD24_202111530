@@ -8,27 +8,49 @@ package proyecto1;
 /** CUP generated class containing symbol constants. */
 public class sym {
   /* terminals */
+  public static final int MENOS = 12;
   public static final int CADENA = 2;
+  public static final int IGUAL = 14;
+  public static final int INT = 16;
+  public static final int CHAR = 20;
+  public static final int FINCADENA = 7;
   public static final int DECIMAL = 4;
-  public static final int ENTERO = 3;
+  public static final int IMPRIMIR = 8;
+  public static final int UMENOS = 13;
+  public static final int ID = 6;
+  public static final int BOOLEANO = 5;
+  public static final int STRING = 18;
+  public static final int EQUALS = 15;
   public static final int EOF = 0;
-  public static final int MAS = 9;
-  public static final int PAR2 = 8;
-  public static final int PAR1 = 7;
-  public static final int FINCADENA = 5;
   public static final int error = 1;
-  public static final int IMPRIMIR = 6;
+  public static final int PAR2 = 10;
+  public static final int PAR1 = 9;
+  public static final int BOOL = 19;
+  public static final int ENTERO = 3;
+  public static final int MAS = 11;
+  public static final int DOUBLE = 17;
   public static final String[] terminalNames = new String[] {
   "EOF",
   "error",
   "CADENA",
   "ENTERO",
   "DECIMAL",
+  "BOOLEANO",
+  "ID",
   "FINCADENA",
   "IMPRIMIR",
   "PAR1",
   "PAR2",
-  "MAS"
+  "MAS",
+  "MENOS",
+  "UMENOS",
+  "IGUAL",
+  "EQUALS",
+  "INT",
+  "DOUBLE",
+  "STRING",
+  "BOOL",
+  "CHAR"
   };
 }
 
