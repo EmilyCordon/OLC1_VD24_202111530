@@ -1,11 +1,8 @@
+package proyecto1;
 import java_cup.runtime.Symbol;
+import proyecto1.sym;
 
 %%
-
-//codigo de usuario, si fuese necesario
-%{
-%}
-
 
 %init{
 yyline = 1;
@@ -13,16 +10,16 @@ yycolumn = 1;
 %init}
 
 
-// declaracion de caracteristicas propias de jflex
+
 %cup
-%class scanner //nombre de la clase
-%public //tipo de la clase
-%line //conteo de lineas
-%char //conteo de caracteres
-%column //conteo de columnas
-%full //reconocimiento de caracteres
-//%debug //para tener salida en la consola
-%ignorecase //quitar distincion entre mayusculas y minusculas
+%class scanner 
+%public 
+%line 
+%char 
+%column 
+%full 
+%debug 
+%ignorecase 
 
 
 // simbolos del sistema

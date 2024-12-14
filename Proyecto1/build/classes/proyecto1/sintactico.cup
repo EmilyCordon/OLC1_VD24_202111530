@@ -1,15 +1,18 @@
+package proyecto1;
+import java_cup.runtime.Symbol;
+
 // importaciones
 import java_cup.runtime.Symbol;
 import java.util.LinkedList;
-import abstracto.Instruccion;
-import simbolo.*;
-
-//INSTRUCCIONES
-import instrucciones.Print;
-
-//EXPRESIONES
-import expresiones.Nativo;
-import expresiones.Suma;
+import proyecto1.Instruccion;
+import proyecto1.Simbolo;
+import proyecto1.tipoDato;
+import proyecto1.Arbol;
+import proyecto1.Tipo;
+import proyecto1.tablaSimbolos;
+import proyecto1.Print;
+import proyecto1.Nativo;
+import proyecto1.Suma;
 
 // parser
 parser code

@@ -12,6 +12,19 @@ import java.io.FileWriter;
 import java.io.IOException;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
+import java.io.StringReader;
+import java.util.LinkedList;
+
+//clases importadas
+
+import proyecto1.Instruccion;
+import proyecto1.parser;
+import proyecto1.scanner;
+import proyecto1.Errores;
+import proyecto1.Arbol;
+import proyecto1.Arbol;
+import proyecto1.tablaSimbolos;
+import proyecto1.tablaSimbolos;
 
 /**
  *
@@ -271,11 +284,60 @@ public class Interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_guardarComoActionPerformed
 
     private void ejSintacticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ejSintacticoActionPerformed
-        // TODO add your handling code here:
+      
+        /*
+        System.out.println("\\");
+        String texto = jTextArea1.getText();
+        try {
+            scanner s = new scanner(new BufferedReader(new StringReader(texto)));
+            parser p = new parser(s);
+            var resultado = p.parse();
+
+            var ast = new Arbol((LinkedList<Instruccion>) resultado.value);
+            var tabla = new tablaSimbolos();
+
+            for (var a : ast.getInstrucciones()) {
+                var res = a.interpretar(ast, tabla);
+                if (res instanceof Errores) {
+                    System.out.println(res.toString());
+                }
+                
+            }
+            
+            jTextArea2.setText(ast.getConsola());
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        */
+        
     }//GEN-LAST:event_ejSintacticoActionPerformed
 
     private void ejecutarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ejecutarActionPerformed
-        // TODO add your handling code here:
+        
+        System.out.println("\\");
+        String texto = jTextAreaEntrada.getText();
+        try {
+            scanner s = new scanner(new BufferedReader(new StringReader(texto)));
+            parser p = new parser(s);
+            var resultado = p.parse();
+
+            var ast = new Arbol((LinkedList<Instruccion>) resultado.value);
+            var tabla = new tablaSimbolos();
+
+            for (var a : ast.getInstrucciones()) {
+                var res = a.interpretar(ast, tabla);
+                if (res instanceof Errores) {
+                    System.out.println(res.toString());
+                }
+            }
+            
+            jTextAreaSalida.setText(ast.getConsola());
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        
     }//GEN-LAST:event_ejecutarActionPerformed
 
     private void erroresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_erroresActionPerformed
