@@ -1,0 +1,21 @@
+name: Sync to GitLab
+
+on:
+  push:
+    branches:
+      - main  
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Push to GitLab
+        env:
+          GITLAB_TOKEN: ${{ secrets.Gitlab }}
+        run: |
+          git remote add gitlab https://oauth2:${Gitlab}@gitlab.com/<EMILY FLOR DE MARIA CORDON RUIZ>/<OLC1 VD24 202111530>.git
+          git push gitlab --all
+          git push gitlab --tags
